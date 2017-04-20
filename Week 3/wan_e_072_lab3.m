@@ -1,4 +1,4 @@
-%% Eric Wan
+%% Eric Wan - ezw23@drexel.edu
 
 %% Question 1
 A = [1 2 -3; 2 5 -8; 3 8 -13]; % Settting values of A matrix
