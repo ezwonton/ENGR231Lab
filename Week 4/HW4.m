@@ -1,3 +1,8 @@
+for i = 1:3
+    i
+end
+
+
 %{
 A = [1 -2 4; -5 2 0; 1 0 3]; % setting A: coeff of system of equations
 B = [1; 2; 3]; % setting B: sol of system of equations
