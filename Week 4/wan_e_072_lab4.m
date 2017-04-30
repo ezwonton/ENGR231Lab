@@ -21,7 +21,7 @@ end
 
 %% Question 3
 figure % creating figure
-p1 = plot(k,results); % plotting results vs. k
+plot(k,results); % plotting results vs. k
 title('Solution of linear equations vs k Version A'); % add title
 xlabel('k'); % add label of x axis
 ylabel('variables x1, x2, x3'); % add label of y axis
