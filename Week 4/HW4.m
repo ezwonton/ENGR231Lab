@@ -55,6 +55,12 @@ Ay(:,2) = AA;
 y = det(Ay)/det(A4);
 a = [x; y]
 
+%{
+det(A4);
+det(Ax);
+augA4AA = [A4,AA];
+rref(augA4AA);
+%}
 
 B4 = [3 -4; 1 1];
 AB = [1; 1];
