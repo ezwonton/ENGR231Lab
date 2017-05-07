@@ -8,7 +8,7 @@ sol1 = det(A1) * inv(A1) % Finding adjoint matrix
 
 %% Problem 2
 A2 = [1 2; 3 4];
-ajdA2 = [4 -3; -2 1]; % Adjoint matrix
+ajdA2 = [4 -2; -3 1]; % Adjoint matrix
 invA2 = ajdA2 / det(A2) % Finding inverse
 inv(A2); % Check
 
@@ -61,5 +61,10 @@ B6T23 = B6T(2, 3); % c ion B'
 B644 = B6(4, 4); % 1 in B
 B6T44 = B6T(4, 4); % 1 in B'
 
-
-
+%% Problem 7
+A7 = [ 3 2 0 2; 1 -1 0 4; 0 5 1 -1];
+rrefA7 = rref(A7) % Finding rref of A7
+%{
+parametrix equation is:
+x = [x1, x2, x3] = [2; -2; 9]
+%}
