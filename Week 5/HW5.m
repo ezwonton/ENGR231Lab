@@ -10,7 +10,7 @@ sol1 = det(A1) * inv(A1) % Finding adjoint matrix
 A2 = [1 2; 3 4];
 ajdA2 = [4 -3; -2 1]; % Adjoint matrix
 invA2 = ajdA2 / det(A2) % Finding inverse
-inv(A2);
+inv(A2); % Check
 
 %% Problem 3
 A3 = A1;
@@ -19,14 +19,14 @@ adjA3 = [24 -12 -2; 5 3 -5; -4 2 4]; % Adjoint = Transposed cofactor
 % adjA3 = [1 0 1; 2 4 0; 3 5 6]
 % ^^ Incorrect calculation, here as a reminder for myself
 invA3 = adjA3 / det(A3) % Finding inverse
-inv(A3);
+inv(A3); % Check
 
 %% Problem 4
 A4 = A2;
 I4 = eye(2); % Creating 2x2 identity matrix
 aug4 = [A4, I4]; % Concatenating A4 and I4 
 rref4 = rref(aug4) % Finding inverse of A4 using RREF
-inv(A4);
+inv(A4); % Check
 
 %% Problem 5
 A5 = [4 3; 3 2];
@@ -52,7 +52,7 @@ B21 = y; in the transposed matrix, B', y is at B'(1, 2)
 B32 = c; in the transposed matrix, B', c is at B'(2, 3) 
 B44 = 1, in the transposed matrix, B', 1 is at B'(4, 4), the same position
 The transposed matrix is a row and column exchangin
-B(1, 3) becomes B'(3, 1) as the check below would show
+B(1, 3) becomes B'(3, 1) as the checks below would show
 %}
 B621 = B6(2, 1); % y in B
 B6T12 = B6T(1, 2); % y in B'
