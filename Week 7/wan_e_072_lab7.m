@@ -19,6 +19,8 @@ Calculated in quadfit printed above
 plot(X, Y, 'o'), hold on, grid on % plotting data points of pts_setA(1)
 plot(X, Y_est, 'r') % plotting line of best fit
 legend('Observations','Quad Fit') % labeling legend
+xlabel('x')
+ylabel('y')
 title('Quadratic Fit of data given in ptsMixA.mat') % labeling title
 
 %% Problem 6
