@@ -179,23 +179,9 @@ norm(d)
 
 %% Problem 6
 load('pts.mat')
-X = ptsMixA(1,:); % setting X
-Y = ptsMixA(2,:); % setting Y
-[N, XT, D, YT, beta_est, Y_est] = quadfit(X, Y); % running quadfit
-err = YT - Y_est; % calculating error of each Y value
-RMSEQ = (err'*err/N)^0.5 % calculating RMS error
+X = ptsMixA(1:2,:).'; % setting X
+Y = transpose(ptsMixA(3,:)); % setting Y
+B = (X.' * X)^(-1) * X.' * Y % solving for least square solution
+A = X * B; % setting Ax values
+Err = norm(Y - A) % solving for residual error
 
-plot(X, Y, 'o'), hold on, grid on % plotting data points of pts_setA(1)
-plot(X, Y_est, 'r') % plotting line of best fit
-xlabel('x')
-ylabel('y')
-title('Quadratic and Linear Fit of Data') % labeling title
-hold on
-
-[N, XT, D, YT, beta_est, Y_est] = linefit(X, Y); % running linefit
-err = YT - Y_est; % calculating error of each Y value
-RMSEL = (err'*err/N)^0.5 % calculating RMS error
-plot(X, Y_est, 'k') % plotting line of best fit
-legend('Observations','Quad Fit', 'Linear Fit') % labeling legend
-
-% quadratic fit is better than linear fit
