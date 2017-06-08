@@ -12,8 +12,8 @@ pacman = [xcoords;ycoords;ones(1,length(xcoords))]; % homogeneous coordinates
 %% Display Pacman
 figure(10)
 fill(xcoords,ycoords,'r')
-axis([0 5 0 5])
-grid on; axis equal; hold on
+grid on;
+hold on;
 title('my pacman for ENGR231  note center is 1.5, 2.5 wrt 0,0')
 
 %%   define maze 
@@ -23,7 +23,7 @@ figure(777)
 
 % outer edges
 mm = [[0;0], [25;0], [25;25], [0;25], [0;10], [15;10], [15;15], [5;15], [5;20]];
-mazey1 = [[0;0], [0;5]] % vertical at end
+mazey1 = [[0;0], [0;5]]; % vertical at end
 % inner closure
 mazex2= [[0;5], [20;5], [20;20], [5;20]];
 
@@ -31,7 +31,6 @@ plot(mm(1,:),mm(2,:),'k','linewidth',3)
 hold on
 plot(mazex2(1,:),mazex2(2,:),'k','linewidth',3)
 plot(mazey1(1,:), mazey1(2,:), 'k','linewidth', 3)
-axis([-5, 30, -5, 30])
 grid on; 
 title('pacman maze Version 1')
 %%  show final destination
@@ -55,6 +54,7 @@ fill(pac2(1,:),pac2(2,:),'g')
 
 %% your code goes here *********
 %[rand rand rand] gives you different colours everytime you run it!
+
 % How Exciting!!! haha
 
 pac3 = trans(0,10)*pac2;
@@ -65,6 +65,10 @@ pac4 = trans(21,20)*trans(1.5,2.5)*rot(180)*trans(-1.5,-2.5)*pacman;
 fill(pac4(1,:),pac4(2,:),[rand rand rand])
 % creating pacman 4 by rotating orginial pacman by 180 degrees then
 % translating 21 units in x and 20 units in y
+
+pacex = trans(0,10)*rot(90)*pac3;
+fill(pacex(1,:),pacex(2,:),[rand rand rand])
+
 
 pac5 = trans(1,20)*trans(1.5,2.5)*rot(-90)*trans(-1.5,-2.5)*pacman;
 fill(pac5(1,:),pac5(2,:),[rand rand rand])

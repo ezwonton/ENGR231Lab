@@ -1,4 +1,5 @@
 %% Eric Wan - ezw23@drexel.edu
+format rat
 A = [2 1 4 9 6; 7 1 0 5 -1; 32 0 1 0 3; -2 0 1 22 -2; -51 0 0 -3 4]; % Set A
 B = [13; 5; 68; 17; -6]; % Set B
 
