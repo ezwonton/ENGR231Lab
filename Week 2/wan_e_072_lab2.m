@@ -53,8 +53,8 @@ end
 % following same procedure of first plot
 subplot(2,1,2);
 p2 = plot(y,sign);
-p2.Color = ('blue')
-p2.LineWidth = 2
+p2.Color = ('blue');
+p2.LineWidth = 2;
 title('Sign dY/dt vs. Y')
 xlabel('Y')
 ylabel('Sign dY/dt')
